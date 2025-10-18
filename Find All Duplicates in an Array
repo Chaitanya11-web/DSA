@@ -1,0 +1,21 @@
+class Solution {
+public:
+    vector<int> findDuplicates(vector<int>& nums) {
+         vector<int> temp;
+         int n=nums.size();
+        sort(nums.begin(),nums.end());
+        int i=1;
+        int j=0;
+        while(i<n){
+            //if number repeats twice ,push_back in temp
+if(nums[i]==nums[i-1] && (temp.size()==0 || temp.back()!=nums[i])){
+   temp.push_back(nums[i]);
+   i++;
+}
+else{
+    i++;
+}
+        }
+return temp;
+    }
+};
