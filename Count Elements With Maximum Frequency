@@ -1,0 +1,25 @@
+class Solution {
+public:
+    int maxFrequencyElements(vector<int>& nums) {
+       unordered_map<int,int>map;
+       int freq=0;
+       int count=0;
+       //enter frequency of each element of a set
+       for(int num:nums){
+        map[num]++;
+       }
+       //take pair from set
+       for(auto& pair:map){
+        //if freq of an element is greater than other then make count=1
+        if(pair.second>freq){
+            freq=pair.second;
+            count=1;
+        }
+        //if freq is same
+        else if(pair.second==freq){
+            count++;
+        }
+       }
+       return count*freq;
+    }
+};
