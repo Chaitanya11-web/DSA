@@ -1,0 +1,23 @@
+//BRUTE FORCE APPROACH
+class Solution {
+public:
+    vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
+    unordered_set<int> set1;
+      vector<int> res;
+         unordered_set<int> set2; 
+         for(int num:nums1){
+            set1.insert(num);
+         }
+         for(int num:nums2){
+            set2.insert(num);
+         }
+       int i=0;
+       int j=0;
+      for(int val:set1){
+        if(set2.find(val)!=set2.end()){
+            res.push_back(val);
+        }
+      }
+       return res;
+    }
+};
