@@ -1,0 +1,24 @@
+// User function template for C++
+class Solution {
+  public:
+    string removeDuplicates(string &s) {
+        // code here
+        string res;
+        res.push_back(s[0]);
+        bool found=false;
+        for(int i=0;i<s.length();i++){
+            for(int j=0;j<res.length();j++){
+                if(s[i]==res[j]){
+                    found=true;
+                    break;
+                }
+            }
+            if(found==false){
+                res.push_back(s[i]);
+                
+            }
+            found=false;
+        }
+        return res;
+    }
+};
