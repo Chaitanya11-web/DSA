@@ -1,0 +1,18 @@
+class Solution {
+  public:
+  int pow(int n1,int rem){
+      if(rem==1)return n1;
+      return n1*pow(n1,rem-1);
+  }
+    int reverseExponentiation(int n) {
+        // code here
+        int rem=0;
+        int n1=n;
+      while(n!=0){
+          rem=n%10;
+          n=n/10;
+      }
+      return pow(n1,rem);
+      
+    }
+};
