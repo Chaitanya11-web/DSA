@@ -1,0 +1,29 @@
+class Solution {
+public:
+    vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
+       int i=0;
+       vector<int>res;
+       vector<int>stack;
+       unordered_map<int,int>map;
+       while(i<nums2.size()){
+stack.push_back(nums2[i]);
+for(int j=i+1;j<nums2.size();j++){
+    if(nums2[j]>nums2[i]){
+map.insert({nums2[i],nums2[j]});
+stack.pop_back();
+break;
+    }
+}
+i++;
+       }
+       for(int j=0;j<nums1.size();j++){
+if(map.find(nums1[j])!=map.end()){
+    res.push_back(map[nums1[j]]);
+}
+else{
+    res.push_back(-1);
+}
+       } 
+       return res;
+    }
+};
