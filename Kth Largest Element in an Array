@@ -1,0 +1,62 @@
+class Solution {
+public:
+    // ✅ Corrected heapify
+    int heapify(vector<int>& nums, int i, int& size) {
+        int ans = 0;
+        int largest = i;
+        int left = 2 * i + 1;
+        int right = 2 * i + 2;
+
+        if (left < size && nums[left] > nums[largest])
+            largest = left;
+
+        if (right < size && nums[right] > nums[largest])
+            largest = right;
+
+        if (largest != i) {
+            swap(nums[i], nums[largest]);
+            ans = i;
+            heapify(nums, largest, size);
+        }
+        return nums[i];
+    }
+
+    // ✅ Corrected buildHeap
+    void buildHeap(vector<int>& nums, int val, int n, int &index) {
+        if (index == n)
+            return;
+
+        nums[index] = val;
+        int current = index;
+
+        // fixing heapify-up condition
+        while (current > 0 && nums[(current - 1) / 2] < nums[current]) {
+            swap(nums[(current - 1) / 2], nums[current]);
+            current = (current - 1) / 2;
+        }
+        index++;
+    }
+
+    int findKthLargest(vector<int>& nums, int k) {
+        int index = 0;
+        int n = nums.size();
+
+        // ✅ Build max heap
+        for (int i = 0; i < n; i++) {
+            buildHeap(nums, nums[i], n, index);
+        }
+
+        int size = index;
+        int ans = 0;
+
+        // ✅ Extract max k times
+        for (int j = 0; j < k; j++) {
+            swap(nums[0], nums[size - 1]); // move largest to end
+            size--;
+            heapify(nums, 0, size);
+        }
+
+        ans = nums[size]; // kth largest
+        return ans;
+    }
+};
