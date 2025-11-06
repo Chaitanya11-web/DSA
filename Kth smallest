@@ -1,0 +1,56 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+   void buildHeap(vector<int>& arr,int val,int n,int& index){
+        if(index>=n)return;
+        arr[index]=val;
+        int current=index;
+        while(current>0 && arr[(current-1)/2]>arr[current]){
+            int temp=arr[(current-1)/2];
+            arr[(current-1)/2]=arr[current];
+            arr[current]=temp;
+            current=(current-1)/2;
+        }
+        index++;
+    }
+
+   void heapify(vector<int>& arr,int i,int size){
+       int smallest=i;                     // ✅ FIXED: rename largest→smallest
+       int left=2*i+1;
+       int right=2*i+2;
+
+       if(left<size && arr[left]<arr[smallest])
+           smallest=left;
+       if(right<size && arr[right]<arr[smallest])
+           smallest=right;
+
+       if(smallest!=i){                    // ✅ FIXED: replaced while→if
+           swap(arr[i], arr[smallest]);    // ✅ cleaner swap
+           heapify(arr,smallest,size);
+       }
+   }
+
+public:
+   int kthSmallest(vector<int>& arr, int k) {
+        int n=arr.size();
+        int index=0;
+
+        // Build heap
+        for(int i=0;i<n;i++){
+            buildHeap(arr,arr[i],n,index);
+        }
+
+        int size=index;
+        if(size==0)return 0;
+
+        // Extract min (k-1) times
+        for(int i=0;i<k;i++){
+            swap(arr[0], arr[size-1]);
+            size--;
+            heapify(arr,0,size);
+        }
+
+        return arr[size];
+   }
+};
