@@ -1,0 +1,38 @@
+bool complete(Node* tree,int i,int count){
+    if(tree==NULL)return 1;
+    if(i>=count)return 0;
+    
+    return complete(tree->left,2*i+1,count)&&complete(tree->right,2*i+2,count);
+}
+int countNodes(Node* tree){
+    if(tree==NULL)return 0;
+    
+    return 1+countNodes(tree->left)+countNodes(tree->right);
+}
+bool isH(Node* tree){
+    if(tree==NULL)return true;
+        
+        if((tree->left) && !(tree->right))return ((tree->data) > (tree->left->data));
+        
+        if(tree->left && tree->right){
+            if( (tree->data < tree->left->data) ||  (tree->data < tree->right->data)){
+                return false;
+            }
+        }
+            
+        return isH(tree->left)&& isH(tree->right);
+}
+class Solution {
+  public:
+    bool isHeap(Node* tree) {
+        // code here
+         bool ans=true;
+        int count=countNodes(tree);
+        bool isComplete=complete(tree,0,count);
+        if(isComplete==0)return false;
+        else {
+           ans= isH(tree);
+        }
+        return ans;
+    }
+};
