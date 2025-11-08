@@ -1,0 +1,75 @@
+#brute-force
+class Solution {
+public:
+    vector<int> topKFrequent(vector<int>& nums, int k) {
+    unordered_map<int,int>map;
+    vector<int>res;
+    int maxi=0;
+    int prev=0;
+    for(int num:nums){
+        map[num]++;
+    }  
+   priority_queue<pair<int,int>>pq;
+   for(auto it:map){
+    pq.push({it.second,it.first});
+   }
+for(int i=0;i<k;i++){
+    res.push_back(pq.top().second);
+    pq.pop();
+}
+
+return res;
+    }
+};
+#better
+class Solution {
+public:
+void build(vector<pair<int,int>>&pq,pair<int,int>p,int &index,int n){
+    if(index>=n)return;
+pq.push_back(p);
+int current=index;
+while(current>0 && pq[(current-1)/2]<pq[current]){
+    swap(pq[(current-1)/2],pq[current]);
+    current=(current-1)/2;
+}
+index++;
+}
+void heapify(vector<pair<int,int>>&pq,int i,int& size){
+    int largest=i;
+    int left=2*i+1;
+    int right=2*i+2;
+    if(left<size && pq[left].first>pq[largest].first){
+       swap(left,largest);
+    }
+    if(right<size && pq[right].first>pq[largest].first){
+       swap(right,largest);
+    }
+    if(largest!=i){
+        swap(pq[largest],pq[i]);
+        heapify(pq,largest,size);
+    }
+}
+    vector<int> topKFrequent(vector<int>& nums, int k) {
+    unordered_map<int,int>map;
+    vector<int>res;
+    int maxi=0;
+    int prev=0;
+    for(int num:nums){
+        map[num]++;
+    }  
+    int n=map.size();
+    int index=0;
+    vector<pair<int,int>>pq;
+   for(auto it:map){
+    build(pq,{it.second,it.first},index,n);
+   }
+   int size=index;
+for(int i=0;i<k;i++){
+swap(pq[0],pq[size-1]);
+size--;
+res.push_back(pq[size].second);
+heapify(pq,0,size);
+}
+return res;
+    }
+};
