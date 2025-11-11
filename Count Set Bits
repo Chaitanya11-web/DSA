@@ -1,0 +1,22 @@
+#Brute force
+class Solution {
+  public:
+    int countSetBits(int n) {
+       int count=0;
+       int num=0;
+       vector<int>res;
+        // code here
+        for(int i=1;i<=n;i++){
+           num=i;
+           int bit=0;
+           while(num>0){
+            bit=num%2;
+            if(bit==1)count++;
+            res.push_back('0'+bit);
+            num=num/2;
+           }
+           
+        }
+        return count;
+    }
+};
