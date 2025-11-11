@@ -1,0 +1,25 @@
+class Solution {
+public:
+vector<vector<int>>find(vector<int>& nums,int i,vector<int>&curr,vector<vector<int>>&ans){
+    if(i==nums.size()){
+        ans.push_back(curr);
+        return ans;
+    }
+    curr.push_back(nums[i]);
+    find(nums,i+1,curr,ans);
+    curr.pop_back();
+   // find(nums,i+1,curr,ans);
+    int index=i+1;
+    while(index<nums.size() && nums[index]==nums[index-1]){
+index++;
+    }
+    find(nums,index,curr,ans);
+return ans;
+}
+    vector<vector<int>> subsetsWithDup(vector<int>& nums) {
+      vector<vector<int>>ans;
+      vector<int>curr;
+      sort(nums.begin(),nums.end());
+     return find(nums,0,curr,ans);  
+    }
+};
