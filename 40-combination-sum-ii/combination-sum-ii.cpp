@@ -11,10 +11,10 @@ public:
             vector<int> temp = res;
             sort(temp.begin(), temp.end());
 
-            if(s.find(temp) == s.end()) {
+           // if(s.find(temp) == s.end()) {
                 ans.push_back(temp);
                 s.insert(temp);
-            }
+           // }
             return ans;
         }
 
