@@ -8,12 +8,12 @@ public:
         // If target reached
         if(target == 0) {
             // sort for dedup
-            vector<int> temp = res;
-            sort(temp.begin(), temp.end());
+            //vector<int> temp = res;
+            sort(res.begin(), res.end());
 
            // if(s.find(temp) == s.end()) {
-                ans.push_back(temp);
-                s.insert(temp);
+                ans.push_back(res);
+               // s.insert(temp);
            // }
             return ans;
         }
