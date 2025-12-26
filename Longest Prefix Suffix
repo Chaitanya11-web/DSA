@@ -1,0 +1,31 @@
+class Solution {
+  public:
+    int getLPSLength(string &s) {
+        // code here
+        int n=s.length();
+        vector<int>arr(n,0);
+        int pre=0;
+        int suff=1;
+        while(pre<n && suff<n){
+            if(s[pre]==s[suff]){
+                arr[suff]=pre+1;
+                pre++;
+                suff++;
+            }
+            else{
+               while(pre>0){
+                   pre--;
+                   if(s[arr[pre]]==s[suff]){
+                       pre=arr[pre];
+                      arr[suff]=pre+1;
+                pre++;
+                suff++;
+                break;
+                   }
+               }
+              if(pre==0)suff++; 
+            }
+        }
+        return arr[n-1];
+    }
+};
