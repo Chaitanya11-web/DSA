@@ -1,0 +1,21 @@
+// User function template for C++
+class Solution {
+  public:
+
+    string removeVowels(string& s) {
+        string res;
+        int i=0;
+        // Your code goes here
+        int n=s.length();
+        while(i<n){
+            if(s[i]=='a' || s[i]=='e' || s[i]=='i' || s[i]=='o' || s[i]=='u'  ){
+                i++;
+                continue;}
+            else{
+               res+=s[i]; 
+            }
+            i++;
+        }
+        return res;
+    }
+};
