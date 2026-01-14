@@ -11,9 +11,9 @@ while(i<n && s[i]!=' '){
     word+=s[i];
     i++;
 }
-reverse(word.begin(),word.end());
+
 if(word.length()>0){
-    
+   reverse(word.begin(),word.end()); 
     ans+=" "+word;
 }
         }
