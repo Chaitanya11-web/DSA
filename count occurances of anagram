@@ -24,17 +24,12 @@ class Solution {
         
         int i=0;
         int j=0;
-        for(auto it:map1){
-            int cnt=it.second;
-            sum+=cnt;
-        }
+      
         while(j<n){
             if(map1.find(txt[j])!=map1.end()  ){
-                if(map1[txt[j]]<0){
-                    sum--;
-                }{
+               
                 map1[txt[j]]--;
-                }
+                
             }
            if(j-i+1==m){
                if(isAllZero(map1)){
