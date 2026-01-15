@@ -4,18 +4,18 @@ public:
         int n=s.length();
         int k1=1;
         bool ans=false;
-        while(k1<n){
-if(s[k1]==s[k1-1]){
-    ans=true;
-}
-else{
-    ans=false;
-    break;
-}
-    k1++;    }
-        if(ans==true){
-            return n;
-        }
+//         while(k1<n){
+// if(s[k1]==s[k1-1]){
+//     ans=true;
+// }
+// else{
+//     ans=false;
+//     break;
+// }
+//     k1++;    }
+//         if(ans==true){
+//             return n;
+//         }
        vector<int>map1(256,0);
        int i=0;
        int j=0;
