@@ -1,40 +1,39 @@
 class Solution {
 public:
     string minWindow(string s, string t) {
-        unordered_map<char,int> need, window;
-        
-        for(char c : t) need[c]++;
-        
-        int required = need.size();
-        int formed = 0;
-        
-        int l = 0, r = 0;
-        int minLen = INT_MAX, start = 0;
-        
-        while(r < s.length()) {
-            char c = s[r];
-            window[c]++;
-            
-            if(need.count(c) && window[c] == need[c])
-                formed++;
-            
-            while(l <= r && formed == required) {
-                if(r - l + 1 < minLen) {
-                    minLen = r - l + 1;
-                    start = l;
-                }
-                
-                char leftChar = s[l];
-                window[leftChar]--;
-                
-                if(need.count(leftChar) && window[leftChar] < need[leftChar])
-                    formed--;
-                
-                l++;
-            }
-            r++;
-        }
-        
-        return minLen == INT_MAX ? "" : s.substr(start, minLen);
+      int n=s.length();
+      int m=t.length();
+      int start_idx=0;
+      int i=0;
+      int j=0;
+      int requiredCount=m;
+      int minWindowSize=INT_MAX;
+      if(m>n){
+        return "";
+      }
+      unordered_map<char,int>map1;
+for(int i=0;i<m;i++){
+    map1[t[i]]++;
+}
+while(j<n){
+char ch=s[j];
+if(map1[ch]>0){
+  requiredCount--;  
+}
+map1[ch]--;
+while(requiredCount==0){
+    int currWindowSize=j-i+1;
+    if(minWindowSize>currWindowSize){
+        minWindowSize=currWindowSize;
+        start_idx=i;
     }
+    map1[s[i]]++;
+    if(map1[s[i]]>0){
+        requiredCount++;
+    }
+    i++;
+}
+j++;
+}
+ return minWindowSize==INT_MAX? "":s.substr(start_idx,minWindowSize);   }
 };
