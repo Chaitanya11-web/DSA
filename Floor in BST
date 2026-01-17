@@ -1,0 +1,23 @@
+class Solution {
+  public:
+    int floor(Node* root, int x) {
+        // code here
+        if(root==NULL){
+            return -1;
+        }
+        if(root->data==x){
+            return x;
+        }
+        if(root->data>x){
+            return floor(root->left,x);
+        }
+      int floorRight=floor(root->right,x);
+      if(floorRight==-1){
+          return root->data;
+      }
+      else{
+          return floorRight;
+      }
+      return -1;
+    }
+};
