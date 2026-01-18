@@ -3,7 +3,7 @@ public:
 
     // Find inorder successor (smallest in right subtree)
     TreeNode* inorderSucc(TreeNode* root) {
-        while (root != NULL && root->left != NULL) {
+        while ( root->left != NULL) {
             root = root->left;
         }
         return root;
