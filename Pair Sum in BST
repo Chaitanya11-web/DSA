@@ -1,0 +1,29 @@
+class Solution {
+  public:
+  void inorder(Node* root,vector<int>& arr){
+      if(root==NULL){
+          return ;
+      }
+      inorder(root->left,arr);
+      arr.push_back(root->data);
+      inorder(root->right,arr);
+  }
+    bool findTarget(Node *root, int target) {
+        // your code here.
+        vector<int>arr;
+        int ans=false;
+        inorder(root,arr);
+        int n=arr.size();
+        unordered_set<int>st;
+        for(int i=0;i<n;i++){
+            if(st.find(target-arr[i])==st.end()){
+                st.insert(arr[i]);
+            }
+            else{
+                ans= true;
+                break;
+            }
+        }
+        return ans;
+    }
+};
