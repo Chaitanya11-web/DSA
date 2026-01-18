@@ -1,0 +1,68 @@
+/*
+class Node {
+  public:
+    int data;
+    Node *left;
+    Node *right;
+
+    Node(int val) {
+        data = val;
+        left = right = NULL;
+    }
+};
+*/
+
+class Solution {
+  public:
+  void mergeTree1(Node *root1,vector<int>&arr1){
+      if(root1==NULL){
+          return;
+      }
+      mergeTree1(root1->left,arr1);
+      arr1.push_back(root1->data);
+      mergeTree1(root1->right,arr1);
+  }
+  void mergeTree2(Node *root2,vector<int>&arr2){
+      if(root2==NULL){
+          return;
+      }
+      mergeTree2(root2->left,arr2);
+      arr2.push_back(root2->data);
+      mergeTree1(root2->right,arr2);
+  }
+    vector<int> merge(Node *root1, Node *root2) {
+        // code here
+       vector<int>arr1;
+        vector<int>arr2;
+        vector<int>ans;
+        mergeTree1(root1,arr1);
+        mergeTree2(root2,arr2);
+        int l=0;
+        int r=0;
+        int m=arr1.size();
+        int n=arr2.size();
+        while(l<m && r<n){
+           if(arr1[l]<=arr2[r]){
+               ans.push_back(arr1[l]);
+               l++;
+               
+           } 
+          else{
+            ans.push_back(arr2[r]);
+              
+               r++;   
+          }  
+            
+        }
+        while(l<m){
+           ans.push_back(arr1[l]);
+               l++;  
+        }
+        while(r<n){
+           ans.push_back(arr2[r]);
+               
+               r++; 
+        }
+        return ans;
+    }
+};
