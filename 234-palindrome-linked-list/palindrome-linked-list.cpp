@@ -36,7 +36,7 @@ curr=fut;
         }
     ListNode* head1=head;
      ListNode* head2=prev;    
-for(int i=0;i<k;i++){
+while(head1!=NULL && head2!=NULL){
     if(head1->val!=head2->val){
         ans=false;
         return false;
