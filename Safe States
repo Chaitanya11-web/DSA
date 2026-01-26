@@ -1,0 +1,50 @@
+class Solution {
+  public:
+  bool dfs(vector<int>&visited,vector<int>&pathVisited,int i,vector<vector<int>>&list){
+      int node=i;
+      pathVisited[node]=1;
+      visited[node]=1;
+      for(int i=0;i<list[node].size();i++){
+          int curr=list[node][i];
+          if(visited[curr]==0){
+              if(dfs(visited,pathVisited,curr,list)){
+                  return true;
+              }
+          }
+          else if(pathVisited[curr]==1){
+              return true;
+          }
+      }
+      pathVisited[node]=0;
+    return false;  
+  }
+    vector<int> safeNodes(int V, vector<vector<int>>& edges) {
+        // Code here
+        bool ans=false;
+        vector<int>ans1;
+        vector<int>visited(V,0);
+        vector<int>pathVisited(V,0);
+        vector<vector<int>>list(V);
+        for(auto it:edges){
+            int u=it[0];
+            int v=it[1];
+            list[u].push_back(v);
+        }
+        for(int i=0;i<V;i++){
+            if(visited[i]==0){
+               if( dfs(visited,pathVisited,i,list)){
+                   ans=true;
+                   
+               }
+            }
+        }
+        
+        for(int i=0;i<V;i++){
+            if(pathVisited[i]==false){
+                ans1.push_back(i);
+            }
+        }
+        
+     return ans1;   
+    }
+};
