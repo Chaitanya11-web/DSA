@@ -1,0 +1,35 @@
+class Solution {
+  public:
+    vector<int> shortestPath(int V, vector<vector<int>> &edges, int src) {
+
+        vector<vector<pair<int,int>>> list(V);
+        for(auto it : edges){
+            int u = it[0];
+            int v = it[1];
+            list[u].push_back({v,1});
+            list[v].push_back({u,1});   // ✅ FIX: undirected
+        }
+
+        vector<int> distance(V, -1);
+        queue<int> q;
+
+        q.push(src);
+        distance[src] = 0;
+
+        while(!q.empty()){
+            int node = q.front();
+            q.pop();
+
+            for(int i = 0; i < list[node].size(); i++){
+                int curr = list[node][i].first;
+
+                if(distance[curr] == -1){
+                    distance[curr] = distance[node] + 1;
+                    q.push(curr);
+                }
+            }
+        }
+
+        return distance;
+    }
+};
