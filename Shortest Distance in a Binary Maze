@@ -1,0 +1,52 @@
+class Solution {
+  public:
+    int shortestPath(vector<vector<int>> &grid, pair<int, int> source,
+                     pair<int, int> destination) {
+ if(source == destination) return 0;
+
+        // FIX 2: blocked source
+        if(grid[source.first][source.second] == 0) return -1;
+        int m = grid.size();
+        int n = grid[0].size();
+
+        queue<pair<int,pair<int,int>>> q;
+        vector<vector<int>> distance(m, vector<int>(n, INT_MAX));
+
+        int si = source.first;
+        int sj = source.second;
+
+        distance[si][sj] = 0;
+        q.push({0, {si, sj}});
+
+        int dx[4] = {1, -1, 0, 0};
+        int dy[4] = {0, 0, 1, -1};
+
+        while(!q.empty()){
+            auto it = q.front();
+            q.pop();
+
+            int dist = it.first;
+            int i = it.second.first;
+            int j = it.second.second;
+
+            for(int d = 0; d < 4; d++){
+                int ni = i + dx[d];
+                int nj = j + dy[d];
+
+                if(ni >= 0 && nj >= 0 && ni < m && nj < n && grid[ni][nj] == 1){
+                    if(dist + 1 < distance[ni][nj]){
+                        distance[ni][nj] = dist + 1;
+
+                        if(ni == destination.first && nj == destination.second){
+                            return dist + 1;
+                        }
+
+                        q.push({ distance[ni][nj], {ni, nj}});
+                    }
+                }
+            }
+        }
+
+        return -1;
+    }
+};
