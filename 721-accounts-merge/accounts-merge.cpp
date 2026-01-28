@@ -60,7 +60,7 @@ else{
         merged[i].end()
     );
 }vector<vector<string>> finalResult;
-for (auto &v : result) {
+for (auto v : result) {
     if (!v.empty()) {
         finalResult.push_back(v);
     }
