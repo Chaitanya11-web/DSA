@@ -14,7 +14,7 @@ for(int i=0;i<list[node].size();i++){
     else{
         cnt++;
         dfs(curr,node,list,disc,low,visited,n,cnt,bridges);
-        low[node]=min(low[node],low[curr]);
+       low[node]=min(low[node],low[curr]);
         if(disc[node]<low[curr]){
             vector<int>temp;
 temp.push_back(curr);
