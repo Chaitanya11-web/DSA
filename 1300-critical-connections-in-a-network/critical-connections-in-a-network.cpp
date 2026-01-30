@@ -9,7 +9,8 @@ for(int i=0;i<list[node].size();i++){
     if(curr==parent)continue;
 
     else if(visited[curr]==1){
-        low[node]=min(low[node],low[curr]);
+        low[node] = min(low[node], disc[curr]);
+
     }
     else{
         cnt++;
