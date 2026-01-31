@@ -1,0 +1,53 @@
+// User function Template for C++
+
+class Solution {
+  public:
+  void dfs(int node,int parent,int V,vector<int> adj[],vector<int>&disc,vector<int>&low,vector<bool>&visited,vector<int>&ans,int cnt){
+      disc[node]=cnt;
+      low[node]=cnt;
+      visited[node]=1;
+      int child=0;
+      for(int i=0;i<adj[node].size();i++){
+          int curr=adj[node][i];
+          if(curr==node){
+              continue;
+          }
+          else if(visited[curr]==1){
+              low[node]=min(low[node],disc[curr]);
+          }
+          else {
+              child++;
+              cnt++;
+              dfs(curr,node,V,adj,disc,low,visited,ans,cnt);
+              low[node]=min(low[node],low[curr]);
+              if(disc[node]<=low[curr] && parent!=-1){
+                  ans[node]=1; 
+              }
+             
+          }
+      }
+      if(child>1 && parent==-1){
+          ans[node]=1;
+      }
+      
+  }
+    vector<int> articulationPoints(int V, vector<int> adj[]) {
+        // Code here
+        int cnt=0;
+        vector<int>disc(V);
+        vector<int>low(V);
+        vector<bool>visited(V,0);
+        vector<int>ans(V,0);
+        vector<int>points;
+        dfs(0,-1,V,adj,disc,low,visited,ans,cnt);
+       for(int i=0;i<V;i++){
+           if(ans[i]==1){
+           points.push_back(i);
+           }
+       }
+       if(points.size()==0){
+          points.push_back(-1); 
+       }
+       return points;
+    }
+};
