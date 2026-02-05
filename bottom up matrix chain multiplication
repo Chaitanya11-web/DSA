@@ -1,0 +1,28 @@
+class Solution {
+  public:
+ int  solve(vector<int> &arr,int i,int j,vector<vector<int>>&t){
+      if(i>=j)return 0;
+      if(t[i][j]!=-1){
+          return t[i][j];
+      }
+      int minimum=INT_MAX;
+      for(int k=i;k<=j-1;k++){
+       int  tempans=solve(arr,i,k,t)+solve(arr,k+1,j,t)+arr[i-1]*arr[k]*arr[j];
+       if(minimum>tempans){
+           minimum=tempans;
+           
+       }
+       
+      }
+     return t[i][j]=minimum; 
+  }
+    int matrixMultiplication(vector<int> &arr) {
+        // code here
+         int n=arr.size();
+        vector<vector<int>>t(n,vector<int>(n,-1));
+       
+        int i=1;
+        int j=n-1;
+      return  solve(arr,i,j,t);
+    }
+};
