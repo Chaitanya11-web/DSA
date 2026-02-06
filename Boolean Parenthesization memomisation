@@ -1,0 +1,64 @@
+class Solution {
+  public:
+
+  int solve(string &s,int i,int j,bool isTrue,unordered_map<string,int>&map1){
+
+      int ans=0;
+
+      if(i>j) return 0;
+
+      if(i==j){
+          if(isTrue==true)
+              return s[i]=='T';
+          else
+              return s[i]=='F';
+      }
+string temp;
+temp+=to_string(i);
+temp+=" ";
+temp+=to_string(j);
+temp+=" ";
+temp+=isTrue;
+if(map1.find(temp)!=map1.end()){
+    return map1[temp];
+}
+      for(int k=i+1;k<=j-1;k+=2){
+
+          int lT=solve(s,i,k-1,true,map1);
+          int lF=solve(s,i,k-1,false,map1);
+          int rT=solve(s,k+1,j,true,map1);
+          int rF=solve(s,k+1,j,false,map1);
+
+          if(s[k]=='&'){
+              if(isTrue==true)
+                  ans += lT*rT;
+              else
+                  ans += lF*rT + lT*rF + lF*rF;   // fixed
+          }
+
+          else if(s[k]=='|'){
+              if(isTrue)
+                  ans += lT*rT + lT*rF + lF*rT;
+              else
+                  ans += lF*rF;
+          }
+
+          else if(s[k]=='^'){
+              if(isTrue)
+                  ans += lT*rF + lF*rT;
+              else
+                  ans += lT*rT + lF*rF;
+          }
+      }
+
+      return map1[temp]=ans;
+  }
+
+
+  int countWays(string &s) {
+
+      int n=s.length();
+unordered_map<string,int>map1;
+      return solve(s,0,n-1,true,map1);   
+  }
+};
