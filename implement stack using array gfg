@@ -1,0 +1,42 @@
+class myStack {
+  public:
+     vector<int>st;
+     int stack_top;
+     int max_size;
+    myStack(int n) {
+        // Define Data Structures
+        max_size=n;
+        st.resize(n);
+        stack_top=-1;
+    }
+
+    bool isEmpty() {
+        // check if the stack is empty
+        return stack_top==-1;
+    }
+
+    bool isFull() {
+        // check if the stack is full
+        return stack_top>=max_size-1;
+    }
+
+    void push(int x) {
+        // inserts x at the top of the stack
+        if(isFull())return;
+        stack_top++;
+        st[stack_top]=x;
+    }
+
+    void pop() {
+        // removes an element from the top of the stack
+        if(isEmpty())return ;
+        stack_top--;
+        
+    }
+
+    int peek() {
+        // Returns the top element of the stack
+        if(isEmpty())return -1;
+        return st[stack_top];
+    }
+};
