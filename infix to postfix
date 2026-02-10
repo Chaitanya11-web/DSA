@@ -1,0 +1,56 @@
+class Solution {
+public:
+    string infixToPostfix(string& s) {
+        unordered_map<char, int> priority;
+        priority['^'] = 3;
+        priority['*'] = 2;
+        priority['/'] = 2;
+        priority['+'] = 1;
+        priority['-'] = 1;
+
+        stack<char> st;
+        string ans;
+        int n = s.size();
+
+        for (int i = 0; i < n; i++) {
+
+            // operand
+            if (isalnum(s[i])) {
+                ans += s[i];
+            }
+
+            // opening bracket
+            else if (s[i] == '(') {
+                st.push(s[i]);
+            }
+
+            // closing bracket
+            else if (s[i] == ')') {
+                while (!st.empty() && st.top() != '(') {
+                    ans += st.top();
+                    st.pop();
+                }
+                st.pop(); // remove '('
+            }
+
+            // operator
+            else {
+                while (!st.empty() &&
+                      (priority[s[i]] < priority[st.top()] ||
+                      (priority[s[i]] == priority[st.top()] && s[i] != '^'))) {
+                    ans += st.top();
+                    st.pop();
+                }
+                st.push(s[i]);
+            }
+        }
+
+        // pop remaining operators
+        while (!st.empty()) {
+            ans += st.top();
+            st.pop();
+        }
+
+        return ans;
+    }
+};
