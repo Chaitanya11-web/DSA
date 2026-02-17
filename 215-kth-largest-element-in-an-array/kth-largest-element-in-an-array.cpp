@@ -22,11 +22,11 @@ public:
     }
 
     // ✅ Corrected buildHeap
-    void buildHeap(vector<int>& nums, int val, int n, int &index) {
+    void buildHeap(vector<int>& nums,  int n, int index) {
         if (index == n)
             return;
 
-        nums[index] = val;
+        //nums[index] = val;
         int current = index;
 
         // fixing heapify-up condition
@@ -34,7 +34,7 @@ public:
             swap(nums[(current - 1) / 2], nums[current]);
             current = (current - 1) / 2;
         }
-        index++;
+        buildHeap(nums,n,index+1);
     }
 
     int findKthLargest(vector<int>& nums, int k) {
@@ -42,11 +42,11 @@ public:
         int n = nums.size();
 
         // ✅ Build max heap
-        for (int i = 0; i < n; i++) {
-            buildHeap(nums, nums[i], n, index);
-        }
+        //for (int i = 0; i < n; i++) {
+            buildHeap(nums, n, 0);
+       // }
 
-        int size = index;
+        int size = n;
         int ans = 0;
 
         // ✅ Extract max k times
