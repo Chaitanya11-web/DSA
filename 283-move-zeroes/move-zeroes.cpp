@@ -6,12 +6,13 @@ public:
       int j=0;
       for(int i=0;i<n;i++){
         if(nums[i]!=0){
-            temp[j]=nums[i];
+            nums[j]=nums[i];
             j++;
         }
       } 
-      for(int i=0;i<n;i++){
-        nums[i]=temp[i];
-      }
+     while(j<n){
+        nums[j]=0;
+        j++;
+     }
     }
 };
