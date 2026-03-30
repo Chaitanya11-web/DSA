@@ -19,6 +19,8 @@ return int(res);
 }
     int countGoodNumbers(long long n) {
        // ye hamesha modeule karte hue int me ho
+       //agar isko int me nhi loge to ye ho jayega long long% double which is wrong 
+       //else ye hoga long long %int which is correct
          int M= 1e9+7;
          //n/2 even place par 4 ko multiply karenge
          
