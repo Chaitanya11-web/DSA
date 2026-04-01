@@ -1,27 +1,28 @@
 class Solution {
 public:
-void permut(vector<int>&nums,int index,int n,set<vector<int>>&st,vector<vector<int>>&ans){
-    if(index==n){
-       if(st.find(nums)==st.end()){
-ans.push_back(nums);
-st.insert(nums);
-       }
-        
+//isme swapping 
+vector<vector<int>>&permutation(vector<int>&nums,int n,int index,vector<vector<int>>&ans,set<vector<int>>&st){
+if(index==n){
+    if(st.find(nums)==st.end()){
+        st.insert(nums);
+        ans.push_back(nums);
+    return ans;
     }
-    for(int i=index;i<n;i++){
-       
-         
-        swap(nums[i],nums[index]);
-        permut(nums,index+1,n,st,ans);
-        swap(nums[i],nums[index]);
-    }
- }
+    
+}
+for(int j=index;j<n;j++){
+    swap(nums[j],nums[index]);
+    permutation(nums,n,index+1,ans,st);
+     swap(nums[j],nums[index]);
+    
+}
+return ans;
+}
     vector<vector<int>> permuteUnique(vector<int>& nums) {
      int n=nums.size();
-      vector<vector<int>>ans;
-      set<vector<int>>st;
-      //sort(nums.begin(),nums.end());
-     permut(nums,0,n,st,ans); 
-     return ans;  
+     vector<vector<int>>ans;
+     set<vector<int>>st;
+     sort(nums.begin(),nums.end());
+     return permutation(nums,n,0,ans,st);   
     }
 };
