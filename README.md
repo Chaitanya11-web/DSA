@@ -21,6 +21,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0047-permutations-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0047-permutations-ii) |
 | [0051-n-queens](https://github.com/Chaitanya11-web/DSA/tree/master/0051-n-queens) |
 | [0090-subsets-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0090-subsets-ii) |
+| [0216-combination-sum-iii](https://github.com/Chaitanya11-web/DSA/tree/master/0216-combination-sum-iii) |
 | [0973-k-closest-points-to-origin](https://github.com/Chaitanya11-web/DSA/tree/master/0973-k-closest-points-to-origin) |
 | [1011-capacity-to-ship-packages-within-d-days](https://github.com/Chaitanya11-web/DSA/tree/master/1011-capacity-to-ship-packages-within-d-days) |
 | [1539-kth-missing-positive-number](https://github.com/Chaitanya11-web/DSA/tree/master/1539-kth-missing-positive-number) |
@@ -112,6 +113,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0051-n-queens](https://github.com/Chaitanya11-web/DSA/tree/master/0051-n-queens) |
 | [0077-combinations](https://github.com/Chaitanya11-web/DSA/tree/master/0077-combinations) |
 | [0090-subsets-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0090-subsets-ii) |
+| [0216-combination-sum-iii](https://github.com/Chaitanya11-web/DSA/tree/master/0216-combination-sum-iii) |
 ## Bit Manipulation
 |  |
 | ------- |
