@@ -18,6 +18,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0040-combination-sum-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0040-combination-sum-ii) |
 | [0046-permutations](https://github.com/Chaitanya11-web/DSA/tree/master/0046-permutations) |
 | [0047-permutations-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0047-permutations-ii) |
+| [0051-n-queens](https://github.com/Chaitanya11-web/DSA/tree/master/0051-n-queens) |
 | [0090-subsets-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0090-subsets-ii) |
 | [0973-k-closest-points-to-origin](https://github.com/Chaitanya11-web/DSA/tree/master/0973-k-closest-points-to-origin) |
 | [1011-capacity-to-ship-packages-within-d-days](https://github.com/Chaitanya11-web/DSA/tree/master/1011-capacity-to-ship-packages-within-d-days) |
@@ -105,6 +106,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0040-combination-sum-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0040-combination-sum-ii) |
 | [0046-permutations](https://github.com/Chaitanya11-web/DSA/tree/master/0046-permutations) |
 | [0047-permutations-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0047-permutations-ii) |
+| [0051-n-queens](https://github.com/Chaitanya11-web/DSA/tree/master/0051-n-queens) |
 | [0090-subsets-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0090-subsets-ii) |
 ## Bit Manipulation
 |  |
