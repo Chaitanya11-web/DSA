@@ -1,48 +1,32 @@
 class Solution {
 public:
-
-void solve(string& digits, int i, int j, string& temp,
-           vector<string>& ans, vector<string>& mapping){
-
-    // ❌ no more digits
-    if(i == digits.size()){
-        if(temp.size() == digits.size()){
-            ans.push_back(temp);
-        }
-        return;
+vector<string>solve(string& digits,int i,string& temp,vector<string>&ans,unordered_map<char,string>&map1){
+    if(i>=digits.length()){
+ans.push_back(temp);
+return ans;
     }
+    char ch=digits[i];
+    string str=map1[ch];
 
-    int num = digits[i] - '0';
-    string letters = mapping[num];
-
-    // ❌ no more letters for this digit
-    if(j == letters.size()){
-        return;
+    for(int j=0;j<str.length();j++){
+        temp.push_back(str[j]);
+         solve(digits,i+1,temp,ans,map1);
+         temp.pop_back();
     }
-
-    // ✅ INCLUDE this letter
-    temp.push_back(letters[j]);
-    solve(digits, i+1, 0, temp, ans, mapping);
-    temp.pop_back();
-
-    // ✅ EXCLUDE this letter → try next letter
-    solve(digits, i, j+1, temp, ans, mapping);
+return ans;
 }
-
-vector<string> letterCombinations(string digits) {
-
-   // if(digits.empty()) return {};
-
-    vector<string> mapping = {
-        "", "", "abc", "def", "ghi", "jkl",
-        "mno", "pqrs", "tuv", "wxyz"
-    };
-
-    vector<string> ans;
-    string temp;
-
-    solve(digits, 0, 0, temp, ans, mapping);
-
-    return ans;
-}
+    vector<string> letterCombinations(string digits) {
+       string temp;
+       vector<string>ans;
+       unordered_map<char,string>map1;
+    map1['2']="abc";
+    map1['3']="def";
+    map1['4']="ghi";
+    map1['5']="jkl";
+    map1['6']="mno";
+    map1['7']="pqrs";
+    map1['8']="tuv";
+    map1['9']="wxyz";
+    return solve(digits,0,temp,ans,map1);
+    }
 };
