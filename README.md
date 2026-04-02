@@ -15,6 +15,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0015-3sum](https://github.com/Chaitanya11-web/DSA/tree/master/0015-3sum) |
+| [0037-sudoku-solver](https://github.com/Chaitanya11-web/DSA/tree/master/0037-sudoku-solver) |
 | [0040-combination-sum-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0040-combination-sum-ii) |
 | [0046-permutations](https://github.com/Chaitanya11-web/DSA/tree/master/0046-permutations) |
 | [0047-permutations-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0047-permutations-ii) |
@@ -97,12 +98,14 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Hash Table
 |  |
 | ------- |
+| [0037-sudoku-solver](https://github.com/Chaitanya11-web/DSA/tree/master/0037-sudoku-solver) |
 | [0138-copy-list-with-random-pointer](https://github.com/Chaitanya11-web/DSA/tree/master/0138-copy-list-with-random-pointer) |
 | [0142-linked-list-cycle-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0142-linked-list-cycle-ii) |
 | [0160-intersection-of-two-linked-lists](https://github.com/Chaitanya11-web/DSA/tree/master/0160-intersection-of-two-linked-lists) |
 ## Backtracking
 |  |
 | ------- |
+| [0037-sudoku-solver](https://github.com/Chaitanya11-web/DSA/tree/master/0037-sudoku-solver) |
 | [0040-combination-sum-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0040-combination-sum-ii) |
 | [0046-permutations](https://github.com/Chaitanya11-web/DSA/tree/master/0046-permutations) |
 | [0047-permutations-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0047-permutations-ii) |
@@ -112,4 +115,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0090-subsets-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0090-subsets-ii) |
+## Matrix
+|  |
+| ------- |
+| [0037-sudoku-solver](https://github.com/Chaitanya11-web/DSA/tree/master/0037-sudoku-solver) |
 <!---LeetCode Topics End-->
