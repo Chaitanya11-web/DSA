@@ -31,7 +31,7 @@ void solve(string& digits, int i, int j, string& temp,
 
 vector<string> letterCombinations(string digits) {
 
-    if(digits.empty()) return {};
+   // if(digits.empty()) return {};
 
     vector<string> mapping = {
         "", "", "abc", "def", "ghi", "jkl",
