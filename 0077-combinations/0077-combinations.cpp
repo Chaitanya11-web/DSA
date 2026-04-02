@@ -1,23 +1,34 @@
 class Solution {
 public:
-    void backtrack(int n, int k, int start, vector<int>& cur, vector<vector<int>>& res) {
-        if ((int)cur.size() == k) {
-            res.push_back(cur);
-            return;
-        }
-        // prune: must leave enough numbers to fill the remaining spots
-        for (int i = start; i <= n - (k - cur.size()) + 1; ++i) {
-            cur.push_back(i);
-            backtrack(n, k, i + 1, cur, res);
-            cur.pop_back();
-        }
+
+void solve(int i, int n, int k, vector<int>& temp, vector<vector<int>>& ans){
+
+    // ✅ base case
+    if(temp.size() == k){
+        ans.push_back(temp);
+        return;
     }
 
-    vector<vector<int>> combine(int n, int k) {
-        vector<vector<int>> res;
-        vector<int> cur;
-        if (k <= 0 || k > n) return res;
-        backtrack(n, k, 1, cur, res);
-        return res;
+    // ❌ stop
+    if(i > n){
+        return;
     }
+
+    // ✅ INCLUDE
+    temp.push_back(i);
+    solve(i + 1, n, k, temp, ans);
+    temp.pop_back();
+
+    // ✅ EXCLUDE
+    solve(i + 1, n, k, temp, ans);
+}
+
+vector<vector<int>> combine(int n, int k) {
+    vector<vector<int>> ans;
+    vector<int> temp;
+
+    solve(1, n, k, temp, ans);
+
+    return ans;
+}
 };
