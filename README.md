@@ -66,6 +66,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Divide and Conquer
 |  |
 | ------- |
+| [0191-number-of-1-bits](https://github.com/Chaitanya11-web/DSA/tree/master/0191-number-of-1-bits) |
 | [0973-k-closest-points-to-origin](https://github.com/Chaitanya11-web/DSA/tree/master/0973-k-closest-points-to-origin) |
 ## Geometry
 |  |
@@ -127,6 +128,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0090-subsets-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0090-subsets-ii) |
+| [0191-number-of-1-bits](https://github.com/Chaitanya11-web/DSA/tree/master/0191-number-of-1-bits) |
 | [0231-power-of-two](https://github.com/Chaitanya11-web/DSA/tree/master/0231-power-of-two) |
 ## Matrix
 |  |
