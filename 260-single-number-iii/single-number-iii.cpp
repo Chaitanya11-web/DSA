@@ -5,12 +5,9 @@ public:
         int n=nums.size();
         unordered_map<int,int>map1;
         for(int i=0;i<n;i++){
-            if(map1.find(nums[i])==map1.end()){
+            
                 map1[nums[i]]++;
-            }
-            else{
-                map1[nums[i]]++;
-            }
+            
         }
         for(auto it:map1){
             int u=it.first;
