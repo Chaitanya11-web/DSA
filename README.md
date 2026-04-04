@@ -21,6 +21,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0046-permutations](https://github.com/Chaitanya11-web/DSA/tree/master/0046-permutations) |
 | [0047-permutations-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0047-permutations-ii) |
 | [0051-n-queens](https://github.com/Chaitanya11-web/DSA/tree/master/0051-n-queens) |
+| [0084-largest-rectangle-in-histogram](https://github.com/Chaitanya11-web/DSA/tree/master/0084-largest-rectangle-in-histogram) |
 | [0090-subsets-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0090-subsets-ii) |
 | [0137-single-number-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0137-single-number-ii) |
 | [0216-combination-sum-iii](https://github.com/Chaitanya11-web/DSA/tree/master/0216-combination-sum-iii) |
@@ -149,12 +150,14 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Stack
 |  |
 | ------- |
+| [0084-largest-rectangle-in-histogram](https://github.com/Chaitanya11-web/DSA/tree/master/0084-largest-rectangle-in-histogram) |
 | [0155-min-stack](https://github.com/Chaitanya11-web/DSA/tree/master/0155-min-stack) |
 | [0496-next-greater-element-i](https://github.com/Chaitanya11-web/DSA/tree/master/0496-next-greater-element-i) |
 | [0503-next-greater-element-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0503-next-greater-element-ii) |
 ## Monotonic Stack
 |  |
 | ------- |
+| [0084-largest-rectangle-in-histogram](https://github.com/Chaitanya11-web/DSA/tree/master/0084-largest-rectangle-in-histogram) |
 | [0496-next-greater-element-i](https://github.com/Chaitanya11-web/DSA/tree/master/0496-next-greater-element-i) |
 | [0503-next-greater-element-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0503-next-greater-element-ii) |
 ## Design
