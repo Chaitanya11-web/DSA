@@ -26,6 +26,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0216-combination-sum-iii](https://github.com/Chaitanya11-web/DSA/tree/master/0216-combination-sum-iii) |
 | [0260-single-number-iii](https://github.com/Chaitanya11-web/DSA/tree/master/0260-single-number-iii) |
 | [0496-next-greater-element-i](https://github.com/Chaitanya11-web/DSA/tree/master/0496-next-greater-element-i) |
+| [0503-next-greater-element-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0503-next-greater-element-ii) |
 | [0973-k-closest-points-to-origin](https://github.com/Chaitanya11-web/DSA/tree/master/0973-k-closest-points-to-origin) |
 | [1011-capacity-to-ship-packages-within-d-days](https://github.com/Chaitanya11-web/DSA/tree/master/1011-capacity-to-ship-packages-within-d-days) |
 | [1539-kth-missing-positive-number](https://github.com/Chaitanya11-web/DSA/tree/master/1539-kth-missing-positive-number) |
@@ -149,8 +150,10 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0496-next-greater-element-i](https://github.com/Chaitanya11-web/DSA/tree/master/0496-next-greater-element-i) |
+| [0503-next-greater-element-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0503-next-greater-element-ii) |
 ## Monotonic Stack
 |  |
 | ------- |
 | [0496-next-greater-element-i](https://github.com/Chaitanya11-web/DSA/tree/master/0496-next-greater-element-i) |
+| [0503-next-greater-element-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0503-next-greater-element-ii) |
 <!---LeetCode Topics End-->
