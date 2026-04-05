@@ -3,14 +3,14 @@ public:
 stack<pair<int,int>>st;
 int stack_top;
     MinStack() {
-      stack_top=-1;  
+       stack_top=-1; 
     }
     
     void push(int val) {
-       if(st.empty()){
+       if(st.empty() ){
         st.push({val,val});
        } 
-       else if(!st.empty() && st.top().second>val){
+       else if(st.top().second>val){
         st.push({val,val});
        }
        else{
@@ -28,21 +28,21 @@ int stack_top;
     }
     
     int top() {
-      if(st.empty()){
+       if(st.empty()){
         return -1;
-      } 
+      }
       else{
         return st.top().first;
-      } 
+      }  
     }
     
     int getMin() {
-      if(st.empty()){
+        if(st.empty()){
         return -1;
-      }  
+      }
       else{
         return st.top().second;
-      }
+      }  
     }
 };
 
