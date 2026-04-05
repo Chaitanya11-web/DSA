@@ -5,14 +5,15 @@ public:
         int j=0;
         vector<int>ans(n,-1);
         for(int i=0;i<n;i++){
-j=(i+1)%n;
-while(j!=i){
-    if(nums[j]>nums[i]){
-     ans[i]=nums[j];
-     break;
-    }
-    j=(j+1)%n;
+            j=(i+1)%n;
+            while(j!=i){
+if(nums[j]>nums[i]){
+    ans[i]=nums[j];
+    break;
 }
+          
+         j=(j+1)%n;   }
         }
- return ans;   }
+        return ans;
+    }
 };
