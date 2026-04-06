@@ -4,42 +4,42 @@ list<int>dll;
 unordered_map<int,pair<list<int>::iterator,int>>map1;
 int size;
     LRUCache(int capacity) {
-     size=capacity;   
+        size=capacity;
     }
-    
     void makeRecentlyUsed(int key){
-dll.erase(map1[key].first);
+        auto val=map1[key].first;
+dll.erase(val);
 dll.push_front(key);
 map1[key].first=dll.begin();
     }
     int get(int key) {
-      if(map1.find(key)==map1.end()){
-        return -1;
-      }
-int val=map1[key].second;
-makeRecentlyUsed(key);
-return val;
+
+       if(map1.find(key)!=map1.end()){
+        makeRecentlyUsed(key);
+        return map1[key].second;
+       }
+return -1;
     }
     
     void put(int key, int value) {
-      if(map1.find(key)!=map1.end()){
+     if(map1.find(key)!=map1.end()){
         map1[key].second=value;
         makeRecentlyUsed(key);
-      }
-      else{
+     }   
+     else{
         dll.push_front(key);
         map1[key].first=dll.begin();
         map1[key].second=value;
         size--;
-      }
-      if(size<0){
-        int el=dll.back();
-        //remember hum log kabhi bhi dll.erase(XXiterator)nhi bhejte hmesha address dete h
-        dll.pop_back();
-        map1.erase(el);
-        size++;
-      }
-
+        if(size<0){
+            int k=dll.back();
+            auto add=map1[k].first;
+            dll.erase(add);
+            //remember
+            map1.erase(k);
+            size++;
+        }
+     }
     }
 };
 
