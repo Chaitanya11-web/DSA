@@ -59,6 +59,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0008-string-to-integer-atoi](https://github.com/Chaitanya11-web/DSA/tree/master/0008-string-to-integer-atoi) |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/Chaitanya11-web/DSA/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0020-valid-parentheses](https://github.com/Chaitanya11-web/DSA/tree/master/0020-valid-parentheses) |
+| [0076-minimum-window-substring](https://github.com/Chaitanya11-web/DSA/tree/master/0076-minimum-window-substring) |
 | [0131-palindrome-partitioning](https://github.com/Chaitanya11-web/DSA/tree/master/0131-palindrome-partitioning) |
 | [0151-reverse-words-in-a-string](https://github.com/Chaitanya11-web/DSA/tree/master/0151-reverse-words-in-a-string) |
 | [0402-remove-k-digits](https://github.com/Chaitanya11-web/DSA/tree/master/0402-remove-k-digits) |
@@ -125,6 +126,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0003-longest-substring-without-repeating-characters](https://github.com/Chaitanya11-web/DSA/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/Chaitanya11-web/DSA/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0037-sudoku-solver](https://github.com/Chaitanya11-web/DSA/tree/master/0037-sudoku-solver) |
+| [0076-minimum-window-substring](https://github.com/Chaitanya11-web/DSA/tree/master/0076-minimum-window-substring) |
 | [0138-copy-list-with-random-pointer](https://github.com/Chaitanya11-web/DSA/tree/master/0138-copy-list-with-random-pointer) |
 | [0142-linked-list-cycle-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0142-linked-list-cycle-ii) |
 | [0146-lru-cache](https://github.com/Chaitanya11-web/DSA/tree/master/0146-lru-cache) |
@@ -209,6 +211,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/Chaitanya11-web/DSA/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0076-minimum-window-substring](https://github.com/Chaitanya11-web/DSA/tree/master/0076-minimum-window-substring) |
 | [0424-longest-repeating-character-replacement](https://github.com/Chaitanya11-web/DSA/tree/master/0424-longest-repeating-character-replacement) |
 | [0438-find-all-anagrams-in-a-string](https://github.com/Chaitanya11-web/DSA/tree/master/0438-find-all-anagrams-in-a-string) |
 <!---LeetCode Topics End-->
