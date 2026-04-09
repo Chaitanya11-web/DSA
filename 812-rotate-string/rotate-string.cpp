@@ -7,6 +7,7 @@ public:
       bool ans=false;
       if(s.length()!=goal.length())return false;
 for(int i=0;i<=n;i++){
+    //remember
     if(str.substr(i,n)==goal){
 return true;
     }
