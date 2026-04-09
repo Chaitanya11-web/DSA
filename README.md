@@ -67,6 +67,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0402-remove-k-digits](https://github.com/Chaitanya11-web/DSA/tree/master/0402-remove-k-digits) |
 | [0424-longest-repeating-character-replacement](https://github.com/Chaitanya11-web/DSA/tree/master/0424-longest-repeating-character-replacement) |
 | [0438-find-all-anagrams-in-a-string](https://github.com/Chaitanya11-web/DSA/tree/master/0438-find-all-anagrams-in-a-string) |
+| [0796-rotate-string](https://github.com/Chaitanya11-web/DSA/tree/master/0796-rotate-string) |
 | [1903-largest-odd-number-in-string](https://github.com/Chaitanya11-web/DSA/tree/master/1903-largest-odd-number-in-string) |
 ## Math
 |  |
@@ -226,4 +227,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0076-minimum-window-substring](https://github.com/Chaitanya11-web/DSA/tree/master/0076-minimum-window-substring) |
 | [0424-longest-repeating-character-replacement](https://github.com/Chaitanya11-web/DSA/tree/master/0424-longest-repeating-character-replacement) |
 | [0438-find-all-anagrams-in-a-string](https://github.com/Chaitanya11-web/DSA/tree/master/0438-find-all-anagrams-in-a-string) |
+## String Matching
+|  |
+| ------- |
+| [0796-rotate-string](https://github.com/Chaitanya11-web/DSA/tree/master/0796-rotate-string) |
 <!---LeetCode Topics End-->
