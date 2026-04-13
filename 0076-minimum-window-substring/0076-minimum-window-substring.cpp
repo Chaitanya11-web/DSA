@@ -15,6 +15,7 @@ public:
         int reqCnt=n;
         while(j<m){
             if(map1.find(s[j])!=map1.end()){
+                //jab map me us index ki value +ve ho tab hi reqCnt-- karenge
         if(map1[s[j]]>0){
               reqCnt--;
                 }
@@ -25,6 +26,7 @@ while(reqCnt==0){
 
 if(minLen>(j-i+1)){
     minLen=j-i+1;
+    //jab minLen change karre tab hi ye start=i krna hoga
     start=i;
 }
 
@@ -36,6 +38,7 @@ if(minLen>(j-i+1)){
 }
 j++;
         }
+        //remember
         return start==-1?"":s.substr(start,minLen);
     }
 };
