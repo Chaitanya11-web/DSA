@@ -1,39 +1,44 @@
 class Solution {
 public:
     string minWindow(string s, string t) {
-      int n=s.length();
-      int m=t.length();
-      int start_idx=0;
-      int i=0;
-      int j=0;
-      int requiredCount=m;
-      int minWindowSize=INT_MAX;
-      if(m>n){
-        return "";
-      }
-      unordered_map<char,int>map1;
-for(int i=0;i<m;i++){
-    map1[t[i]]++;
+        int m=s.length();
+        int n=t.length();
+        if(n>m)return "";
+        int i=0;
+        int start=-1;
+        int minLen=INT_MAX;
+        int j=0;
+        unordered_map<char,int>map1;
+        for(int i=0;i<n;i++){
+            map1[t[i]]++;
+        }
+        int reqCnt=n;
+        while(j<m){
+            if(map1.find(s[j])!=map1.end()){
+                //jab map me us index ki value +ve ho tab hi reqCnt-- karenge
+        if(map1[s[j]]>0){
+              reqCnt--;
+                }
+            }
+            map1[s[j]]--;
+
+while(reqCnt==0){
+
+if(minLen>(j-i+1)){
+    minLen=j-i+1;
+    //jab minLen change karre tab hi ye start=i krna hoga
+    start=i;
 }
-while(j<n){
-char ch=s[j];
-if(map1[ch]>0){
-  requiredCount--;  
-}
-map1[ch]--;
-while(requiredCount==0){
-    int currWindowSize=j-i+1;
-    if(minWindowSize>currWindowSize){
-        minWindowSize=currWindowSize;
-        start_idx=i;
-    }
-    map1[s[i]]++;
-    if(map1[s[i]]>0){
-        requiredCount++;
-    }
-    i++;
+
+   map1[s[i]]++;
+   if(map1[s[i]]>0){
+    reqCnt++;
+   }
+   i++;
 }
 j++;
-}
- return minWindowSize==INT_MAX? "":s.substr(start_idx,minWindowSize);   }
+        }
+        //remember
+        return start==-1?"":s.substr(start,minLen);
+    }
 };
