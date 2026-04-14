@@ -8,6 +8,7 @@ public:
             break;
         }
        } 
+       //i+1 isliye kyuki kyuki vo index se bhar aa jayenge aur indexing 0 based hoti h
        return num.substr(0,i+1);
     }
 };
