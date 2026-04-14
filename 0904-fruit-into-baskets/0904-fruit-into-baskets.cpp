@@ -10,25 +10,22 @@ public:
       int j=0;
       while(j<n){
 map1[fruits[j]]++;
-if(map1.size()<=k){
-    cnt=j-i+1;
-    maxLen=max(cnt,maxLen);
-}
-else{
+
+
 while(map1.size()>k && i<n){
 map1[fruits[i]]--;
 if(map1[fruits[i]]==0){
 map1.erase(fruits[i]);
 }
 i++;
-if(map1.size()<=k){
-   cnt=j-i+1;
-    maxLen=max(cnt,maxLen); 
-}
+
+    
+
 
 }
 
-}
+cnt=j-i+1;
+    maxLen=max(cnt,maxLen);
 
         j++;
       }
