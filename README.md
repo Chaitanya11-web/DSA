@@ -4,6 +4,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Binary Search
 |  |
 | ------- |
+| [0222-count-complete-tree-nodes](https://github.com/Chaitanya11-web/DSA/tree/master/0222-count-complete-tree-nodes) |
 | [0374-guess-number-higher-or-lower](https://github.com/Chaitanya11-web/DSA/tree/master/0374-guess-number-higher-or-lower) |
 | [1011-capacity-to-ship-packages-within-d-days](https://github.com/Chaitanya11-web/DSA/tree/master/1011-capacity-to-ship-packages-within-d-days) |
 | [1539-kth-missing-positive-number](https://github.com/Chaitanya11-web/DSA/tree/master/1539-kth-missing-positive-number) |
@@ -183,6 +184,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0090-subsets-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0090-subsets-ii) |
 | [0137-single-number-ii](https://github.com/Chaitanya11-web/DSA/tree/master/0137-single-number-ii) |
 | [0191-number-of-1-bits](https://github.com/Chaitanya11-web/DSA/tree/master/0191-number-of-1-bits) |
+| [0222-count-complete-tree-nodes](https://github.com/Chaitanya11-web/DSA/tree/master/0222-count-complete-tree-nodes) |
 | [0231-power-of-two](https://github.com/Chaitanya11-web/DSA/tree/master/0231-power-of-two) |
 | [0260-single-number-iii](https://github.com/Chaitanya11-web/DSA/tree/master/0260-single-number-iii) |
 | [2220-minimum-bit-flips-to-convert-number](https://github.com/Chaitanya11-web/DSA/tree/master/2220-minimum-bit-flips-to-convert-number) |
@@ -285,6 +287,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0094-binary-tree-inorder-traversal](https://github.com/Chaitanya11-web/DSA/tree/master/0094-binary-tree-inorder-traversal) |
 | [0102-binary-tree-level-order-traversal](https://github.com/Chaitanya11-web/DSA/tree/master/0102-binary-tree-level-order-traversal) |
 | [0144-binary-tree-preorder-traversal](https://github.com/Chaitanya11-web/DSA/tree/master/0144-binary-tree-preorder-traversal) |
+| [0222-count-complete-tree-nodes](https://github.com/Chaitanya11-web/DSA/tree/master/0222-count-complete-tree-nodes) |
 ## Depth-First Search
 |  |
 | ------- |
@@ -296,6 +299,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0094-binary-tree-inorder-traversal](https://github.com/Chaitanya11-web/DSA/tree/master/0094-binary-tree-inorder-traversal) |
 | [0102-binary-tree-level-order-traversal](https://github.com/Chaitanya11-web/DSA/tree/master/0102-binary-tree-level-order-traversal) |
 | [0144-binary-tree-preorder-traversal](https://github.com/Chaitanya11-web/DSA/tree/master/0144-binary-tree-preorder-traversal) |
+| [0222-count-complete-tree-nodes](https://github.com/Chaitanya11-web/DSA/tree/master/0222-count-complete-tree-nodes) |
 ## Breadth-First Search
 |  |
 | ------- |
