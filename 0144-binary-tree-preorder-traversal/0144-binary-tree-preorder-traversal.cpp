@@ -22,7 +22,7 @@ public:
         while(!st.empty()){
             
             
-            
+            //using stack
                 TreeNode* node=st.top();
                 //remember node->val
                 ans.push_back(node->val);
