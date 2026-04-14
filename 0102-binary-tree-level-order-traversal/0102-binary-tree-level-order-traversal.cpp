@@ -16,6 +16,7 @@ public:
             return {};
         }
         vector<vector<int>>ans;
+        //remember
         queue<TreeNode*>q;
         q.push(root);
         while(!q.empty()){
@@ -23,6 +24,7 @@ public:
             vector<int>temp;
             while(n--){
                 TreeNode* node=q.front();
+                //remember node->val
                 temp.push_back(node->val);
                 q.pop();
                 if(node->left!=NULL){
