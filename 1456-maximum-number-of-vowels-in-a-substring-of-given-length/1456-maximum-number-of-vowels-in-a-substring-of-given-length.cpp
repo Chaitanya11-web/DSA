@@ -11,21 +11,19 @@ bool isVowel(char ch){
         int i=0;
         int j=0;
         int cnt=0;
-        int res=0;
+        int res=INT_MIN;
         while(j<n){
 if(isVowel(s[j])){
 cnt++;
-if(cnt>res){
-    res=cnt;
+
 }
-}
-if(j-i+1==k){
+if(j-i+1>k){
 if(isVowel(s[i])){
     cnt--;
 }
 i++;
 }
-
+res=max(res,cnt);
             j++;
         }
         return res;
