@@ -13,9 +13,7 @@ public:
                 maxFreq=map1[s[j]];
                 
             }
-            if((j-i+1)-maxFreq<=k){
-                maxLen=max(maxLen,j-i+1);
-            }
+            
               if ((j-i+1)-maxFreq>k){
                 map1[s[i]]--;
                 if(map1[s[i]]==0){
@@ -23,6 +21,9 @@ public:
                 }
 i++;
             }
+            
+                maxLen=max(maxLen,j-i+1);
+            
             j++;
         }
        return maxLen;
