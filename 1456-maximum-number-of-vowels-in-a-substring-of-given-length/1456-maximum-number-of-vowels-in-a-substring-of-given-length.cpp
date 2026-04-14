@@ -12,6 +12,11 @@ bool isVowel(char ch){
         int j=0;
         int cnt=0;
         int res=INT_MIN;
+//         Every sliding window problem has 3 steps — in this ORDER:
+
+// 1. EXPAND  →  add nums[j] to window
+// 2. SHRINK  →  fix window if it violated constraint  
+// 3. MEASURE →  record answer ← THIS IS ALWAYS LAST, ALWAYS OUTSIDE
         while(j<n){
 if(isVowel(s[j])){
 cnt++;
