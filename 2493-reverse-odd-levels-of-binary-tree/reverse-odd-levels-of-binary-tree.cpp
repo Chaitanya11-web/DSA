@@ -11,43 +11,35 @@
  */
 class Solution {
 public:
- void invertTree(TreeNode* root, int i,int j){
-while(i<j){
-
-}
-}
     TreeNode* reverseOddLevels(TreeNode* root) {
-       queue<TreeNode*>q;
-       q.push(root);
-     
-       int level=0;
-       while(!q.empty()){
-        int size=q.size();
-          vector<TreeNode*>ans;
-        while(size--){
-          TreeNode* temp=q.front();
-          ans.push_back(temp);
-          q.pop();
-          if(temp->left){
-            q.push(temp->left);
-          } 
-          if(temp->right){
-            q.push(temp->right);
-          } 
-        }
-        if(level%2==1){
-            int i=0;
-            int j=ans.size()-1;
-            while(i<j){
-                swap(ans[i]->val,ans[j]->val);
-                i++;
-                j--;
+        queue<TreeNode*>q;
+        q.push(root);
+        int level=0;
+        while(!q.empty()){
+            vector<TreeNode*>lev;
+            int size=q.size();
+            while(size--){
+              TreeNode* temp=q.front();
+              lev.push_back(temp);
+              q.pop();
+              if(temp->left){
+                q.push(temp->left);
+              }  
+              if(temp->right){
+                q.push(temp->right);
+              }
+            }
+            level++;
+            if(level%2==0){
+                int i=0;
+                int j=lev.size()-1;
+                while(i<j){
+                    swap(lev[i]->val,lev[j]->val);
+                    i++;
+                    j--;
+                }
             }
         }
-        
-        level++;
-
-       } 
-       return root;
+        return root;
     }
 };
